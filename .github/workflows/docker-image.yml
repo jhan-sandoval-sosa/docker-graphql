@@ -27,6 +27,14 @@ jobs:
         docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
         echo "Fin del login"
 
+    - name: Build docker image
+      run:
+        docker build -t jsandovalsosa/docker-graphql:0.0.1 .
+        
+    - name: Push docker image
+      run:
+        docker push jsandovalsosa/docker-graphql:0.0.1 .
+
 
         
     # - name: Build the Docker image
