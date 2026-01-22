@@ -33,7 +33,7 @@ jobs:
         
     - name: Push docker image
       run:
-        docker push jsandovalsosa/docker-graphql:0.0.1 .
+        docker push jsandovalsosa/docker-graphql:0.0.1
 
 
         
