@@ -35,7 +35,7 @@ jobs:
       run: |
         echo "Iniciando login"
         docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
-        echo "New Version: $NEW_VERSION !!!!!"
+        echo "New Version: $NEW_VERSION"
         echo "Fin del login"
     
 
