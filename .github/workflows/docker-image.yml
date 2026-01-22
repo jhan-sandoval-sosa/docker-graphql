@@ -22,22 +22,18 @@ jobs:
       env:
         DOCKER_USER: ${{ secrets.DOCKER_USER }}
         DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-      run:  |
+      run: |
         echo "Iniciando login"
         docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
         echo "Fin del login"
 
     - name: Build docker image
-      run:
+      run: |
         docker build -t jsandovalsosa/docker-graphql:0.0.1 .
         docker build -t jsandovalsosa/docker-graphql:latest .
         
     - name: Push docker image
-      run:
+      run: |
         docker push jsandovalsosa/docker-graphql:0.0.1
         docker push jsandovalsosa/docker-graphql:latest
 
-
-        
-    # - name: Build the Docker image
-    #   run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
