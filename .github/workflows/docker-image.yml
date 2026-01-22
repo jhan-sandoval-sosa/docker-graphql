@@ -30,10 +30,12 @@ jobs:
     - name: Build docker image
       run:
         docker build -t jsandovalsosa/docker-graphql:0.0.1 .
+        docker build -t jsandovalsosa/docker-graphql .
         
     - name: Push docker image
       run:
         docker push jsandovalsosa/docker-graphql:0.0.1
+        docker push jsandovalsosa/docker-graphql
 
 
         
